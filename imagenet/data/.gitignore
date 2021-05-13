@@ -1,2 +1,4 @@
 *
 !.gitignore
+!prepare_train.sh
+!prepare_val.sh
