@@ -44,12 +44,19 @@ Reference
 
 ## Run Benchmarks
 
-Go into each benchmark directory, like `a100x1_lustre`, and submit a job script in the directory.
-When submitting a benchmark that uses data on Lustre (suffix of the benchmark directory is `_lustre`), you should not submit other ImageNet benchmarks to avoid IO contantion.
+Go into each benchmark directory, like `a100x1`, and submit a job script in the directory.
 
 ```Console
 es1 $ cd imagenet
-es1 $ cd a100x1_lustre
-es1 $ qsub -g GROUP a100x1_lustre.sh
+es1 $ cd a100x1
+es1 $ qsub -g GROUP a100x1.sh
 ```
+
+
+## Benchmark Results
+
+### ComputeNode(A) TF32 vs ComputeNode(V) FP32
+
+
+### ComputeNode(A) vs ComputeNode(V) using PyTorch AMP
 
