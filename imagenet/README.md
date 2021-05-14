@@ -57,6 +57,25 @@ es1 $ qsub -g GROUP a100x1.sh
 
 ### ComputeNode(A) TF32 vs ComputeNode(V) FP32
 
+The unit is images per second.
+
+| Hardware        | GPU x Count  | Performance |
+| :-------------- | -----------: | ----------: |
+| ComputeNode(A)  | A100 x 1     | 771.79      |
+| ComputeNode(A)  | A100 x 4     | 3160.13     |
+| ComputeNode(A)  | A100 x 8     | 6102.28     |
+| ComputeNode(V)  | V100 x 1     | 367.07      |
+| ComputeNode(V)  | V100 x 4     | 1446.99     |
+
 
 ### ComputeNode(A) vs ComputeNode(V) using PyTorch AMP
 
+The unit is images per second.
+
+| Hardware        | GPU x Count  | Performance |
+| :-------------- | -----------: | ----------: |
+| ComputeNode(A)  | A100 x 1     | 1251.82     |
+| ComputeNode(A)  | A100 x 4     | 4638.79     |
+| ComputeNode(A)  | A100 x 8     | 8856.24     |
+| ComputeNode(V)  | V100 x 1     | 804.69      |
+| ComputeNode(V)  | V100 x 4     | 3243.58     |
