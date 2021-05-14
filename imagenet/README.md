@@ -1,9 +1,13 @@
 # Benchmark of Training ResNet50 using ImageNet
 
 | Software             | Version   |
-| -------------------- | --------- |
+| :------------------- | --------: |
 | Singularity Pro      | 3.7       |
 | NVIDIA PyTorch Image | 21.04-py3 |
+
+Reference
+
+- [NVIDIA PyTorch Image](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_21-04.html#rel_21-04)
 
 
 ## Prepare The Container Image
