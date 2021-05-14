@@ -1,0 +1,147 @@
+a0022.abci.local
+Time for stage-in: 124
+
+
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'classic', 1000)'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'widths': [64, 128, 256, 512], 'expansion': 4}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_out', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x14b42626faf0>}
+Num classes: 1000
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+DLL 2021-05-14 09:33:00.787279 - PARAMETER data : /local/7063020.1.gpua/imagenet  data_backend : dali-cpu  arch : resnet50  model_config : classic  num_classes : 1000  workers : 5  epochs : 1  run_epochs : -1  batch_size : 256  optimizer_batch_size : -1  lr : 0.1  lr_schedule : step  warmup : 0  label_smoothing : 0.0  mixup : 0.0  momentum : 0.9  weight_decay : 0.0001  bn_weight_decay : False  nesterov : False  print_freq : 1  resume : None  pretrained_weights :   fp16 : False  static_loss_scale : 256.0  dynamic_loss_scale : False  prof : 100  amp : True  seed : None  gather_checkpoints : False  raport_file : benchmark_result.json  evaluate : False  training_only : True  save_checkpoints : False  checkpoint_filename : checkpoint.pth.tar  workspace : ./  memory_format : nchw  distributed : True  local_rank : 0  gpu : 0  world_size : 8 
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O1:  Insert automatic casts around Pytorch functions and Tensor methods.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : 256.0
+RUNNING EPOCHS FROM 0 TO 1
+DLL 2021-05-14 09:35:39.517638 - Epoch: 0 Iteration: 1  train.loss : 7.07902  train.total_ips : 13.32 img/s
+DLL 2021-05-14 09:35:39.749384 - Epoch: 0 Iteration: 2  train.loss : 7.03160  train.total_ips : 8838.90 img/s
+DLL 2021-05-14 09:35:39.979814 - Epoch: 0 Iteration: 3  train.loss : 7.00223  train.total_ips : 8889.40 img/s
+DLL 2021-05-14 09:35:40.209694 - Epoch: 0 Iteration: 4  train.loss : 7.00330  train.total_ips : 8910.82 img/s
+DLL 2021-05-14 09:35:40.440042 - Epoch: 0 Iteration: 5  train.loss : 7.01328  train.total_ips : 8892.57 img/s
+DLL 2021-05-14 09:35:40.669988 - Epoch: 0 Iteration: 6  train.loss : 7.03994  train.total_ips : 8908.18 img/s
+DLL 2021-05-14 09:35:40.899606 - Epoch: 0 Iteration: 7  train.loss : 7.09964  train.total_ips : 8920.84 img/s
+DLL 2021-05-14 09:35:41.129363 - Epoch: 0 Iteration: 8  train.loss : 7.10221  train.total_ips : 8915.69 img/s
+DLL 2021-05-14 09:35:41.359629 - Epoch: 0 Iteration: 9  train.loss : 7.08039  train.total_ips : 8896.49 img/s
+DLL 2021-05-14 09:35:41.589535 - Epoch: 0 Iteration: 10  train.loss : 7.15407  train.total_ips : 8911.43 img/s
+DLL 2021-05-14 09:35:41.819583 - Epoch: 0 Iteration: 11  train.loss : 7.17230  train.total_ips : 8905.21 img/s
+DLL 2021-05-14 09:35:42.049323 - Epoch: 0 Iteration: 12  train.loss : 7.12262  train.total_ips : 8916.99 img/s
+DLL 2021-05-14 09:35:42.278952 - Epoch: 0 Iteration: 13  train.loss : 7.19772  train.total_ips : 8921.59 img/s
+DLL 2021-05-14 09:35:42.508657 - Epoch: 0 Iteration: 14  train.loss : 7.11444  train.total_ips : 8918.74 img/s
+DLL 2021-05-14 09:35:42.738440 - Epoch: 0 Iteration: 15  train.loss : 7.28694  train.total_ips : 8915.59 img/s
+DLL 2021-05-14 09:35:42.968093 - Epoch: 0 Iteration: 16  train.loss : 7.33377  train.total_ips : 8921.00 img/s
+DLL 2021-05-14 09:35:43.197883 - Epoch: 0 Iteration: 17  train.loss : 7.35882  train.total_ips : 8915.68 img/s
+DLL 2021-05-14 09:35:43.427744 - Epoch: 0 Iteration: 18  train.loss : 7.24367  train.total_ips : 8912.71 img/s
+DLL 2021-05-14 09:35:43.657661 - Epoch: 0 Iteration: 19  train.loss : 7.50600  train.total_ips : 8910.37 img/s
+DLL 2021-05-14 09:35:43.887421 - Epoch: 0 Iteration: 20  train.loss : 7.25958  train.total_ips : 8916.57 img/s
+DLL 2021-05-14 09:35:44.117230 - Epoch: 0 Iteration: 21  train.loss : 7.36790  train.total_ips : 8914.61 img/s
+DLL 2021-05-14 09:35:44.347342 - Epoch: 0 Iteration: 22  train.loss : 7.24507  train.total_ips : 8902.72 img/s
+DLL 2021-05-14 09:35:44.577221 - Epoch: 0 Iteration: 23  train.loss : 7.38648  train.total_ips : 8911.98 img/s
+DLL 2021-05-14 09:35:44.807177 - Epoch: 0 Iteration: 24  train.loss : 7.17682  train.total_ips : 8908.97 img/s
+DLL 2021-05-14 09:35:45.036909 - Epoch: 0 Iteration: 25  train.loss : 7.24565  train.total_ips : 8917.83 img/s
+DLL 2021-05-14 09:35:45.266599 - Epoch: 0 Iteration: 26  train.loss : 7.29620  train.total_ips : 8919.33 img/s
+DLL 2021-05-14 09:35:45.496406 - Epoch: 0 Iteration: 27  train.loss : 7.55970  train.total_ips : 8914.78 img/s
+DLL 2021-05-14 09:35:45.726142 - Epoch: 0 Iteration: 28  train.loss : 7.26984  train.total_ips : 8917.55 img/s
+DLL 2021-05-14 09:35:45.956009 - Epoch: 0 Iteration: 29  train.loss : 7.20398  train.total_ips : 8912.56 img/s
+DLL 2021-05-14 09:35:46.185818 - Epoch: 0 Iteration: 30  train.loss : 7.14387  train.total_ips : 8914.60 img/s
+DLL 2021-05-14 09:35:46.415604 - Epoch: 0 Iteration: 31  train.loss : 7.29877  train.total_ips : 8915.46 img/s
+DLL 2021-05-14 09:35:46.645996 - Epoch: 0 Iteration: 32  train.loss : 7.16836  train.total_ips : 8892.32 img/s
+DLL 2021-05-14 09:35:46.875824 - Epoch: 0 Iteration: 33  train.loss : 7.09240  train.total_ips : 8914.10 img/s
+DLL 2021-05-14 09:35:47.105948 - Epoch: 0 Iteration: 34  train.loss : 7.08398  train.total_ips : 8902.37 img/s
+DLL 2021-05-14 09:35:47.335740 - Epoch: 0 Iteration: 35  train.loss : 7.07570  train.total_ips : 8915.53 img/s
+DLL 2021-05-14 09:35:47.565735 - Epoch: 0 Iteration: 36  train.loss : 7.07324  train.total_ips : 8907.46 img/s
+DLL 2021-05-14 09:35:47.795622 - Epoch: 0 Iteration: 37  train.loss : 7.01734  train.total_ips : 8911.49 img/s
+DLL 2021-05-14 09:35:48.025302 - Epoch: 0 Iteration: 38  train.loss : 7.04654  train.total_ips : 8919.77 img/s
+DLL 2021-05-14 09:35:48.255026 - Epoch: 0 Iteration: 39  train.loss : 7.05086  train.total_ips : 8917.95 img/s
+DLL 2021-05-14 09:35:48.484919 - Epoch: 0 Iteration: 40  train.loss : 7.03788  train.total_ips : 8911.34 img/s
+DLL 2021-05-14 09:35:48.715364 - Epoch: 0 Iteration: 41  train.loss : 6.95728  train.total_ips : 8890.42 img/s
+DLL 2021-05-14 09:35:48.945538 - Epoch: 0 Iteration: 42  train.loss : 6.97125  train.total_ips : 8900.53 img/s
+DLL 2021-05-14 09:35:49.175403 - Epoch: 0 Iteration: 43  train.loss : 6.98156  train.total_ips : 8912.71 img/s
+DLL 2021-05-14 09:35:49.405132 - Epoch: 0 Iteration: 44  train.loss : 6.98816  train.total_ips : 8917.87 img/s
+DLL 2021-05-14 09:35:49.634834 - Epoch: 0 Iteration: 45  train.loss : 6.93991  train.total_ips : 8918.85 img/s
+DLL 2021-05-14 09:35:49.864721 - Epoch: 0 Iteration: 46  train.loss : 6.98984  train.total_ips : 8911.77 img/s
+DLL 2021-05-14 09:35:50.094462 - Epoch: 0 Iteration: 47  train.loss : 7.01470  train.total_ips : 8917.35 img/s
+DLL 2021-05-14 09:35:50.324309 - Epoch: 0 Iteration: 48  train.loss : 6.99260  train.total_ips : 8913.32 img/s
+DLL 2021-05-14 09:35:50.554279 - Epoch: 0 Iteration: 49  train.loss : 6.93847  train.total_ips : 8908.43 img/s
+DLL 2021-05-14 09:35:50.784189 - Epoch: 0 Iteration: 50  train.loss : 6.93544  train.total_ips : 8910.90 img/s
+DLL 2021-05-14 09:35:51.013944 - Epoch: 0 Iteration: 51  train.loss : 6.98353  train.total_ips : 8916.63 img/s
+DLL 2021-05-14 09:35:51.243760 - Epoch: 0 Iteration: 52  train.loss : 6.94927  train.total_ips : 8914.43 img/s
+DLL 2021-05-14 09:35:51.473624 - Epoch: 0 Iteration: 53  train.loss : 6.92008  train.total_ips : 8912.55 img/s
+DLL 2021-05-14 09:35:51.703575 - Epoch: 0 Iteration: 54  train.loss : 6.92763  train.total_ips : 8909.23 img/s
+DLL 2021-05-14 09:35:51.933200 - Epoch: 0 Iteration: 55  train.loss : 6.93525  train.total_ips : 8921.77 img/s
+DLL 2021-05-14 09:35:52.163049 - Epoch: 0 Iteration: 56  train.loss : 7.00118  train.total_ips : 8913.14 img/s
+DLL 2021-05-14 09:35:52.392892 - Epoch: 0 Iteration: 57  train.loss : 6.92251  train.total_ips : 8913.50 img/s
+DLL 2021-05-14 09:35:52.622743 - Epoch: 0 Iteration: 58  train.loss : 6.93925  train.total_ips : 8913.52 img/s
+DLL 2021-05-14 09:35:52.852775 - Epoch: 0 Iteration: 59  train.loss : 6.93158  train.total_ips : 8905.99 img/s
+DLL 2021-05-14 09:35:53.082590 - Epoch: 0 Iteration: 60  train.loss : 6.92882  train.total_ips : 8914.34 img/s
+DLL 2021-05-14 09:35:53.312380 - Epoch: 0 Iteration: 61  train.loss : 6.92604  train.total_ips : 8915.43 img/s
+DLL 2021-05-14 09:35:53.542198 - Epoch: 0 Iteration: 62  train.loss : 6.94475  train.total_ips : 8914.40 img/s
+DLL 2021-05-14 09:35:53.772063 - Epoch: 0 Iteration: 63  train.loss : 6.92159  train.total_ips : 8912.50 img/s
+DLL 2021-05-14 09:35:54.001867 - Epoch: 0 Iteration: 64  train.loss : 6.91340  train.total_ips : 8914.95 img/s
+DLL 2021-05-14 09:35:54.231568 - Epoch: 0 Iteration: 65  train.loss : 6.91915  train.total_ips : 8919.20 img/s
+DLL 2021-05-14 09:35:54.461436 - Epoch: 0 Iteration: 66  train.loss : 6.90861  train.total_ips : 8912.63 img/s
+DLL 2021-05-14 09:35:54.691359 - Epoch: 0 Iteration: 67  train.loss : 6.90637  train.total_ips : 8910.74 img/s
+DLL 2021-05-14 09:35:54.921443 - Epoch: 0 Iteration: 68  train.loss : 6.92871  train.total_ips : 8904.23 img/s
+DLL 2021-05-14 09:35:55.151616 - Epoch: 0 Iteration: 69  train.loss : 6.89631  train.total_ips : 8900.46 img/s
+DLL 2021-05-14 09:35:55.381434 - Epoch: 0 Iteration: 70  train.loss : 6.92908  train.total_ips : 8914.41 img/s
+DLL 2021-05-14 09:35:55.611298 - Epoch: 0 Iteration: 71  train.loss : 6.92854  train.total_ips : 8912.47 img/s
+DLL 2021-05-14 09:35:55.841149 - Epoch: 0 Iteration: 72  train.loss : 6.92158  train.total_ips : 8913.26 img/s
+DLL 2021-05-14 09:35:56.070884 - Epoch: 0 Iteration: 73  train.loss : 6.92209  train.total_ips : 8917.69 img/s
+DLL 2021-05-14 09:35:56.300788 - Epoch: 0 Iteration: 74  train.loss : 6.89264  train.total_ips : 8911.06 img/s
+DLL 2021-05-14 09:35:56.530615 - Epoch: 0 Iteration: 75  train.loss : 6.89017  train.total_ips : 8913.80 img/s
+DLL 2021-05-14 09:35:56.760713 - Epoch: 0 Iteration: 76  train.loss : 6.91548  train.total_ips : 8903.44 img/s
+DLL 2021-05-14 09:35:56.990556 - Epoch: 0 Iteration: 77  train.loss : 6.90240  train.total_ips : 8913.68 img/s
+DLL 2021-05-14 09:35:57.220407 - Epoch: 0 Iteration: 78  train.loss : 6.91320  train.total_ips : 8913.10 img/s
+DLL 2021-05-14 09:35:57.450088 - Epoch: 0 Iteration: 79  train.loss : 6.91496  train.total_ips : 8919.71 img/s
+DLL 2021-05-14 09:35:57.679886 - Epoch: 0 Iteration: 80  train.loss : 6.89963  train.total_ips : 8915.05 img/s
+DLL 2021-05-14 09:35:57.909782 - Epoch: 0 Iteration: 81  train.loss : 6.89818  train.total_ips : 8911.37 img/s
+DLL 2021-05-14 09:35:58.139574 - Epoch: 0 Iteration: 82  train.loss : 6.87922  train.total_ips : 8915.96 img/s
+DLL 2021-05-14 09:35:58.369568 - Epoch: 0 Iteration: 83  train.loss : 6.89459  train.total_ips : 8907.63 img/s
+DLL 2021-05-14 09:35:58.599375 - Epoch: 0 Iteration: 84  train.loss : 6.88834  train.total_ips : 8914.81 img/s
+DLL 2021-05-14 09:35:58.829025 - Epoch: 0 Iteration: 85  train.loss : 6.89480  train.total_ips : 8920.84 img/s
+DLL 2021-05-14 09:35:59.058816 - Epoch: 0 Iteration: 86  train.loss : 6.88239  train.total_ips : 8915.34 img/s
+DLL 2021-05-14 09:35:59.288533 - Epoch: 0 Iteration: 87  train.loss : 6.92020  train.total_ips : 8918.51 img/s
+DLL 2021-05-14 09:35:59.518535 - Epoch: 0 Iteration: 88  train.loss : 6.88715  train.total_ips : 8907.19 img/s
+DLL 2021-05-14 09:35:59.748388 - Epoch: 0 Iteration: 89  train.loss : 6.89398  train.total_ips : 8912.94 img/s
+DLL 2021-05-14 09:35:59.978430 - Epoch: 0 Iteration: 90  train.loss : 6.88099  train.total_ips : 8905.81 img/s
+DLL 2021-05-14 09:36:00.208433 - Epoch: 0 Iteration: 91  train.loss : 6.93392  train.total_ips : 8907.30 img/s
+DLL 2021-05-14 09:36:00.438440 - Epoch: 0 Iteration: 92  train.loss : 6.86940  train.total_ips : 8907.02 img/s
+DLL 2021-05-14 09:36:00.668475 - Epoch: 0 Iteration: 93  train.loss : 6.90492  train.total_ips : 8906.01 img/s
+DLL 2021-05-14 09:36:00.898349 - Epoch: 0 Iteration: 94  train.loss : 6.87055  train.total_ips : 8912.15 img/s
+DLL 2021-05-14 09:36:01.128178 - Epoch: 0 Iteration: 95  train.loss : 6.84484  train.total_ips : 8913.97 img/s
+DLL 2021-05-14 09:36:01.358082 - Epoch: 0 Iteration: 96  train.loss : 6.89372  train.total_ips : 8911.15 img/s
+DLL 2021-05-14 09:36:01.588150 - Epoch: 0 Iteration: 97  train.loss : 6.86648  train.total_ips : 8904.85 img/s
+DLL 2021-05-14 09:36:01.818059 - Epoch: 0 Iteration: 98  train.loss : 6.85283  train.total_ips : 8910.73 img/s
+DLL 2021-05-14 09:36:02.047957 - Epoch: 0 Iteration: 99  train.loss : 6.86312  train.total_ips : 8911.31 img/s
+DLL 2021-05-14 09:36:02.278093 - Epoch: 0  train.loss : 7.02142  train.total_ips : 8822.02 img/s
+DLL 2021-05-14 09:36:02.278263 - Epoch: 0  lr : 0.1  train.compute_ips : 8856.24 img/s train.data_time : 0.00194 s train.compute_time : 1.76367 s
+DLL 2021-05-14 09:36:02.278343 - Summary: train.loss : 7.02142  train.total_ips : 8822.02 img/s
+DLL 2021-05-14 09:36:02.278384 - Summary: lr : 0.1  train.compute_ips : 8856.24 img/s train.data_time : 0.00194 s train.compute_time : 1.76367 s
+Experiment ended
+['/opt/conda/bin/python', '-u', '/workspace/examples/resnet50v1.5/main.py', '--arch', 'resnet50', '--batch-size', '256', '--training-only', '--no-checkpoints', '--print-freq', '1', '--raport-file', 'benchmark_result.json', '--epochs', '1', '--prof', '100', '--amp', '--static-loss-scale', '256', '/local/7063020.1.gpua/imagenet']
+['/opt/conda/bin/python', '-u', '/workspace/examples/resnet50v1.5/main.py', '--arch', 'resnet50', '--batch-size', '256', '--training-only', '--no-checkpoints', '--print-freq', '1', '--raport-file', 'benchmark_result.json', '--epochs', '1', '--prof', '100', '--amp', '--static-loss-scale', '256', '/local/7063020.1.gpua/imagenet']
+['/opt/conda/bin/python', '-u', '/workspace/examples/resnet50v1.5/main.py', '--arch', 'resnet50', '--batch-size', '256', '--training-only', '--no-checkpoints', '--print-freq', '1', '--raport-file', 'benchmark_result.json', '--epochs', '1', '--prof', '100', '--amp', '--static-loss-scale', '256', '/local/7063020.1.gpua/imagenet']
+['/opt/conda/bin/python', '-u', '/workspace/examples/resnet50v1.5/main.py', '--arch', 'resnet50', '--batch-size', '256', '--training-only', '--no-checkpoints', '--print-freq', '1', '--raport-file', 'benchmark_result.json', '--epochs', '1', '--prof', '100', '--amp', '--static-loss-scale', '256', '/local/7063020.1.gpua/imagenet']
+['/opt/conda/bin/python', '-u', '/workspace/examples/resnet50v1.5/main.py', '--arch', 'resnet50', '--batch-size', '256', '--training-only', '--no-checkpoints', '--print-freq', '1', '--raport-file', 'benchmark_result.json', '--epochs', '1', '--prof', '100', '--amp', '--static-loss-scale', '256', '/local/7063020.1.gpua/imagenet']
+['/opt/conda/bin/python', '-u', '/workspace/examples/resnet50v1.5/main.py', '--arch', 'resnet50', '--batch-size', '256', '--training-only', '--no-checkpoints', '--print-freq', '1', '--raport-file', 'benchmark_result.json', '--epochs', '1', '--prof', '100', '--amp', '--static-loss-scale', '256', '/local/7063020.1.gpua/imagenet']
+['/opt/conda/bin/python', '-u', '/workspace/examples/resnet50v1.5/main.py', '--arch', 'resnet50', '--batch-size', '256', '--training-only', '--no-checkpoints', '--print-freq', '1', '--raport-file', 'benchmark_result.json', '--epochs', '1', '--prof', '100', '--amp', '--static-loss-scale', '256', '/local/7063020.1.gpua/imagenet']
+['/opt/conda/bin/python', '-u', '/workspace/examples/resnet50v1.5/main.py', '--arch', 'resnet50', '--batch-size', '256', '--training-only', '--no-checkpoints', '--print-freq', '1', '--raport-file', 'benchmark_result.json', '--epochs', '1', '--prof', '100', '--amp', '--static-loss-scale', '256', '/local/7063020.1.gpua/imagenet']
