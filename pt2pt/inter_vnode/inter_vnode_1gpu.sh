@@ -13,7 +13,7 @@ export UCX_HOME=/apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0
 export LD_LIBRARY_PATH=${UCX_HOME}/lib:${LD_LIBRARY_PATH}
 
 WORKDIR=`pwd`
-OMBDIR=${WORKDIR}/../omb-5.7-vnode/libexec/osu-micro-benchmarks
+OMBDIR=${WORKDIR}/../../programs/omb-5.7-vnode/libexec/osu-micro-benchmarks
 PROG_LATENCY=${OMBDIR}/mpi/pt2pt/osu_latency
 PROG_BANDWIDTH=${OMBDIR}/mpi/pt2pt/osu_bw
 #PROG_OPTION="-m 8388608 -d cuda"  # error occurs in bandwidth test
