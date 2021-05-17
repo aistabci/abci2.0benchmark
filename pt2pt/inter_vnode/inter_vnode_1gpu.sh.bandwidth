@@ -1,0 +1,28 @@
+[1621250176.781374] [g0275:256187:0]         parser.c:1578 UCX  WARN  unused env variable: UCX_HOME (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1621250176.982944] [g0276:157910:0]         parser.c:1578 UCX  WARN  unused env variable: UCX_HOME (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+# OSU MPI-CUDA Bandwidth Test v5.7
+# Send Buffer on DEVICE (D) and Receive Buffer on DEVICE (D)
+# Size      Bandwidth (MB/s)
+1                       2.60
+2                       5.23
+4                      10.74
+8                      21.38
+16                     42.71
+32                     84.68
+64                    161.08
+128                   318.69
+256                   625.57
+512                   996.42
+1024                 1129.36
+2048                 1226.78
+4096                 1228.63
+8192                 1251.46
+16384                1246.80
+32768                7442.19
+65536                9211.93
+131072               9747.91
+262144               9925.02
+524288              10093.68
+1048576             10170.65
+2097152             10205.19
+4194304             10216.91
