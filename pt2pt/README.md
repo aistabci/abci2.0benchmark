@@ -88,7 +88,7 @@ g0001$ tar zxf osu-micro-benchmarks-5.7.tar.gz
 g0001$ cd osu-micro-benchmarks-5.7
 g0001$ CC=mpicc ./configure --prefix=$INSTALL_DIR --enable-cuda
 g0001$ make; make install
-a0001$ cd ..
+g0001$ cd ..
 g0001$ rm -fr osu-micro-benchmarks-5.7
 ```
 
