@@ -15,28 +15,26 @@ WORKDIR=`pwd`
 OMBDIR=${WORKDIR}/../../programs/omb-5.7-anode/libexec/osu-micro-benchmarks
 PROG_LATENCY=${OMBDIR}/mpi/pt2pt/osu_multi_lat
 PROG_BANDWIDTH=${OMBDIR}/mpi/pt2pt/osu_mbw_mr
-PROG_OPTION="-m 4194304 -d cuda"
+PROG_OPTION="-m 4194304"
 
 # number of processes/node (GPUs)
-NPPN=8
+NPPN=1
 # total MPI processes
 NMPIPROCS=$(($NHOSTS * $NPPN))
-# number of processes/socket
-NPPS=$(($NPPN / 2))
 
-mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket -tag-output hostname
+mpirun -np $NMPIPROCS --map-by ppr:${NPPN}:node -tag-output hostname
 
-mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket \
+mpirun -np $NMPIPROCS --map-by ppr:${NPPN}:node \
        --mca pml ucx --mca osc ucx \
        -x PATH \
        -x LD_LIBRARY_PATH \
        -x UCX_WARN_UNUSED_ENV_VARS=n \
-       ${PROG_LATENCY} ${PROG_OPTION} D D > ${JOB_NAME}.latency
+       ${PROG_LATENCY} ${PROG_OPTION} H H > ${JOB_NAME}.latency
 
-mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket \
+mpirun -np $NMPIPROCS --map-by ppr:${NPPN}:node \
        --mca pml ucx --mca osc ucx \
        -x PATH \
        -x LD_LIBRARY_PATH \
        -x UCX_WARN_UNUSED_ENV_VARS=n \
-       ${PROG_BANDWIDTH} ${PROG_OPTION} D D > ${JOB_NAME}.bandwidth
+       ${PROG_BANDWIDTH} ${PROG_OPTION} H H > ${JOB_NAME}.bandwidth
 

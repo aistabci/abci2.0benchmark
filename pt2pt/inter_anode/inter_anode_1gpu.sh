@@ -25,14 +25,14 @@ NMPIPROCS=$(($NHOSTS * $NPPN))
 mpirun -np $NMPIPROCS --map-by ppr:${NPPN}:node -tag-output hostname
 
 mpirun -np $NMPIPROCS --map-by ppr:${NPPN}:node \
-       --mca btl_openib_want_cuda_gdr 1 \
+       --mca pml ucx --mca osc ucx \
        -x PATH \
        -x LD_LIBRARY_PATH \
        -x UCX_WARN_UNUSED_ENV_VARS=n \
        ${PROG_LATENCY} ${PROG_OPTION} D D > ${JOB_NAME}.latency
 
 mpirun -np $NMPIPROCS --map-by ppr:${NPPN}:node \
-       --mca btl_openib_want_cuda_gdr 1 \
+       --mca pml ucx --mca osc ucx \
        -x PATH \
        -x LD_LIBRARY_PATH \
        -x UCX_WARN_UNUSED_ENV_VARS=n \
