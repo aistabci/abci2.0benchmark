@@ -15,7 +15,7 @@ Reference
 Download PyTorch container image from NGC Container Registry.
 
 ```Console
-es1 $ cd imagenet
+es1 $ cd programs
 es1 $ module load singularitypro/3.7
 es1 $ singularity pull docker://nvcr.io/nvidia/pytorch:21.04-py3
 es1 $ ls -1

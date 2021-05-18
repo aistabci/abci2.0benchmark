@@ -7,7 +7,7 @@ source /etc/profile.d/modules.sh
 module load singularitypro/3.7
 
 WORKDIR=`pwd`
-SIGFILE=${WORKDIR}/../pytorch_21.04-py3.sif
+SIGFILE=${WORKDIR}/../../programs/pytorch_21.04-py3.sif
 ARCHIVE=${WORKDIR}/../data/imagenet.tar
 
 PARALLEL_PROGRAM=/workspace/examples/resnet50v1.5/multiproc.py
@@ -35,4 +35,3 @@ singularity exec --bind $BIND_PATH --nv $SIGFILE \
         --epochs 1 \
         --prof 100 \
         $DATADIR
-

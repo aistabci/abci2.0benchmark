@@ -61,7 +61,7 @@ Procedures for building OSU Micro-Benchmarks for ComputeNode(A).
 
 ```Console
 es1$ qrsh -g GROUP -l rt_AG.small=1
-a0001$ cd pt2pt
+a0001$ cd programs
 a0001$ module load cuda/11.2/11.2.2
 a0001$ module load openmpi/4.0.5
 a0001$ wget http://mvapich.cse.ohio-state.edu/download/mvapich/osu-micro-benchmarks-5.7.tar.gz
@@ -78,7 +78,7 @@ Procedures for building OSU Micro-Benchmarks for ComputeNode(V).
 
 ```Console
 es1$ qrsh -g GROUP -l rt_G.small=1
-g0001$ cd pt2pt
+g0001$ cd programs
 g0001$ module load cuda/11.2/11.2.2
 g0001$ module load gcc/7.4.0
 g0001$ module load openmpi/4.0.5
