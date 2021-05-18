@@ -13,8 +13,8 @@ export LD_LIBRARY_PATH=${UCX_HOME}/lib:${LD_LIBRARY_PATH}
 
 WORKDIR=`pwd`
 OMBDIR=${WORKDIR}/../../programs/omb-5.7-anode/libexec/osu-micro-benchmarks
-PROG_LATENCY=${OMBDIR}/mpi/pt2pt/osu_latency
-PROG_BANDWIDTH=${OMBDIR}/mpi/pt2pt/osu_bw
+PROG_LATENCY=${OMBDIR}/mpi/pt2pt/osu_multi_lat
+PROG_BANDWIDTH=${OMBDIR}/mpi/pt2pt/osu_mbw_mr
 PROG_OPTION="-m 4194304 -d cuda"
 
 # number of processes/node (GPUs)
