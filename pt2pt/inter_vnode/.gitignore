@@ -1,2 +1,4 @@
 inter_vnode_1gpu.sh.e*
 inter_vnode_4gpu.sh.e*
+inter_vnode_1prc.sh.e*
+inter_vnode_4prc.sh.e*
