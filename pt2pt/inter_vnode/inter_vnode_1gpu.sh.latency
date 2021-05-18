@@ -1,29 +1,27 @@
-[1621250170.066248] [g0275:256131:0]         parser.c:1578 UCX  WARN  unused env variable: UCX_HOME (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
-[1621250170.297417] [g0276:157821:0]         parser.c:1578 UCX  WARN  unused env variable: UCX_HOME (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
 # OSU MPI-CUDA Latency Test v5.7
 # Send Buffer on DEVICE (D) and Receive Buffer on DEVICE (D)
 # Size          Latency (us)
 0                       1.29
-1                       2.55
-2                       2.39
-4                       2.38
+1                       2.70
+2                       2.40
+4                       2.39
 8                       2.39
 16                      2.39
-32                      2.44
-64                      2.54
-128                     2.57
-256                     2.62
-512                     2.79
-1024                    2.96
+32                      2.45
+64                      2.56
+128                     2.58
+256                     2.64
+512                     2.78
+1024                    3.01
 2048                    4.00
 4096                    6.12
 8192                   10.62
-16384                  18.26
-32768                  30.89
-65536                  57.40
-131072                116.78
-262144                 62.59
-524288                 89.07
-1048576               140.78
-2097152               242.55
-4194304               450.21
+16384                  18.28
+32768                  30.91
+65536                  57.52
+131072                117.47
+262144                 62.62
+524288                 89.06
+1048576               140.67
+2097152               242.33
+4194304               450.36

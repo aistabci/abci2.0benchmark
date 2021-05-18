@@ -16,7 +16,6 @@ WORKDIR=`pwd`
 OMBDIR=${WORKDIR}/../../programs/omb-5.7-vnode/libexec/osu-micro-benchmarks
 PROG_LATENCY=${OMBDIR}/mpi/pt2pt/osu_latency
 PROG_BANDWIDTH=${OMBDIR}/mpi/pt2pt/osu_bw
-#PROG_OPTION="-m 8388608 -d cuda"  # error occurs in bandwidth test
 PROG_OPTION="-m 4194304 -d cuda"
 
 # number of processes/node (GPUs)
@@ -30,11 +29,13 @@ mpirun -np $NMPIPROCS --map-by ppr:${NPPN}:node \
        --mca btl_openib_want_cuda_gdr 1 \
        -x PATH \
        -x LD_LIBRARY_PATH \
+       -x UCX_WARN_UNUSED_ENV_VARS=n \
        ${PROG_LATENCY} ${PROG_OPTION} D D > ${JOB_NAME}.latency
 
 mpirun -np $NMPIPROCS --map-by ppr:${NPPN}:node \
        --mca btl_openib_want_cuda_gdr 1 \
        -x PATH \
        -x LD_LIBRARY_PATH \
+       -x UCX_WARN_UNUSED_ENV_VARS=n \
        ${PROG_BANDWIDTH} ${PROG_OPTION} D D > ${JOB_NAME}.bandwidth
 
