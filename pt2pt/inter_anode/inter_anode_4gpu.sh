@@ -28,15 +28,19 @@ mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket -tag-output hostname
 
 mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket \
        --mca btl_openib_want_cuda_gdr 1 \
+       --mca btl_openib_if_include "mlx5_0:1,mlx5_2:1,mlx5_4:1,mlx5_6:1" \
        -x PATH \
        -x LD_LIBRARY_PATH \
        -x UCX_WARN_UNUSED_ENV_VARS=n \
+       ./gpuid_4gpu_.sh \
        ${PROG_LATENCY} ${PROG_OPTION} D D > ${JOB_NAME}.latency
 
 mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket \
        --mca btl_openib_want_cuda_gdr 1 \
+       --mca btl_openib_if_include "mlx5_0:1,mlx5_2:1,mlx5_4:1,mlx5_6:1" \
        -x PATH \
        -x LD_LIBRARY_PATH \
        -x UCX_WARN_UNUSED_ENV_VARS=n \
+       ./gpuid_4gpu_.sh \
        ${PROG_BANDWIDTH} ${PROG_OPTION} D D > ${JOB_NAME}.bandwidth
 
