@@ -1,0 +1,50 @@
+[1621495852.799606] [a0009:1263124:0]         parser.c:1629 UCX  WARN  unused env variable: UCX_HOME (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1621495852.808189] [a0009:1263130:0]         parser.c:1629 UCX  WARN  unused env variable: UCX_HOME (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1621495852.818071] [a0009:1263126:0]         parser.c:1629 UCX  WARN  unused env variable: UCX_HOME (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1621495852.834298] [a0009:1263131:0]         parser.c:1629 UCX  WARN  unused env variable: UCX_HOME (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1621495852.857533] [a0009:1263127:0]         parser.c:1629 UCX  WARN  unused env variable: UCX_HOME (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1621495852.857506] [a0009:1263129:0]         parser.c:1629 UCX  WARN  unused env variable: UCX_HOME (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1621495852.858394] [a0009:1263125:0]         parser.c:1629 UCX  WARN  unused env variable: UCX_HOME (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1621495852.859353] [a0009:1263128:0]         parser.c:1629 UCX  WARN  unused env variable: UCX_HOME (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+# nThread 1 nGpus 1 minBytes 4 maxBytes 33554432 step: 2(factor) warmup iters: 5 iters: 100 validation: 1 
+#
+# Using devices
+#   Rank  0 Pid 1263124 on      a0009 device  0 [0x27] A100-SXM4-40GB
+#   Rank  1 Pid 1263125 on      a0009 device  1 [0x2a] A100-SXM4-40GB
+#   Rank  2 Pid 1263126 on      a0009 device  2 [0x51] A100-SXM4-40GB
+#   Rank  3 Pid 1263127 on      a0009 device  3 [0x57] A100-SXM4-40GB
+#   Rank  4 Pid 1263128 on      a0009 device  4 [0x9e] A100-SXM4-40GB
+#   Rank  5 Pid 1263129 on      a0009 device  5 [0xa4] A100-SXM4-40GB
+#   Rank  6 Pid 1263130 on      a0009 device  6 [0xc7] A100-SXM4-40GB
+#   Rank  7 Pid 1263131 on      a0009 device  7 [0xca] A100-SXM4-40GB
+#
+#                                                     out-of-place                       in-place          
+#       size         count    type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                     (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+           4             1   float     sum    22.49    0.00    0.00  0e+00    17.33    0.00    0.00  1e-07
+           8             2   float     sum    17.18    0.00    0.00  1e-07    17.11    0.00    0.00  1e-07
+          16             4   float     sum    17.31    0.00    0.00  0e+00    17.34    0.00    0.00  6e-08
+          32             8   float     sum    17.30    0.00    0.00  6e-08    17.24    0.00    0.00  6e-08
+          64            16   float     sum    17.50    0.00    0.01  6e-08    17.40    0.00    0.01  6e-08
+         128            32   float     sum    17.84    0.01    0.01  3e-08    17.59    0.01    0.01  3e-08
+         256            64   float     sum    18.34    0.01    0.02  3e-08    18.35    0.01    0.02  3e-08
+         512           128   float     sum    18.65    0.03    0.05  3e-08    18.52    0.03    0.05  3e-08
+        1024           256   float     sum    20.21    0.05    0.09  1e-07    19.76    0.05    0.09  1e-07
+        2048           512   float     sum    22.54    0.09    0.16  2e-07    22.41    0.09    0.16  2e-07
+        4096          1024   float     sum    26.15    0.16    0.27  2e-07    24.46    0.17    0.29  2e-07
+        8192          2048   float     sum    26.90    0.30    0.53  2e-07    24.85    0.33    0.58  2e-07
+       16384          4096   float     sum    28.92    0.57    0.99  2e-07    26.77    0.61    1.07  2e-07
+       32768          8192   float     sum    36.55    0.90    1.57  2e-07    35.10    0.93    1.63  2e-07
+       65536         16384   float     sum    40.00    1.64    2.87  2e-07    39.54    1.66    2.90  2e-07
+      131072         32768   float     sum    43.05    3.04    5.33  2e-07    42.34    3.10    5.42  2e-07
+      262144         65536   float     sum    48.58    5.40    9.44  2e-07    48.36    5.42    9.49  2e-07
+      524288        131072   float     sum    58.91    8.90   15.57  2e-07    58.34    8.99   15.73  2e-07
+     1048576        262144   float     sum    75.21   13.94   24.40  2e-07    74.69   14.04   24.57  2e-07
+     2097152        524288   float     sum    115.6   18.15   31.76  2e-07    116.0   18.09   31.65  2e-07
+     4194304       1048576   float     sum    141.3   29.69   51.96  2e-07    139.9   29.98   52.46  2e-07
+     8388608       2097152   float     sum    205.9   40.75   71.30  2e-07    202.0   41.53   72.68  2e-07
+    16777216       4194304   float     sum    249.4   67.26  117.71  2e-07    245.1   68.45  119.79  2e-07
+    33554432       8388608   float     sum    427.8   78.43  137.25  2e-07    357.2   93.93  164.39  2e-07
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 20.2977 
+#
