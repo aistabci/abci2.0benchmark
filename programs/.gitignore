@@ -1,4 +1,6 @@
 osu-micro-benchmarks-5.7*
 omb-5.7-anode
 omb-5.7-vnode
+nccl-tests-anode
+nccl-tests-vnode
 pytorch_21.04-py3.sif
