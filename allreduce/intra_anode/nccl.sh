@@ -16,6 +16,7 @@ mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket \
        --mca pml ucx --mca osc ucx \
        -x PATH \
        -x LD_LIBRARY_PATH \
+       -x UCX_WARN_UNUSED_ENV_VARS=n \
        -x NCCL_IB_CUDA_SUPPORT=1 \
        ${PROG} ${PROG_OPTION} > $OUTPUT
 
