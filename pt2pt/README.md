@@ -1,20 +1,21 @@
 # Inter GPU Point-to-Point Communication Benchmark
 
-Use benchmark software.
+Used benchmark software.
 
 - p2pBandwidthLatencyTest (as a part of CUDA) for intra-node inter-gpu communication
 - [OSU Micro-Benchmarks](https://mvapich.cse.ohio-state.edu/benchmarks/) for inter-node communication
 
 Software versions.
 
-| Software  | ComputeNode(V) | ComputeNode(A) |
-| :-------- | -------------: | -------------: |
-| OS        | CentOS 7.5     | RHEL 8.2       |
-| gcc       | 7.4.0          | 8.3.1          |
-| CUDA      | 11.2.2         | 11.2.2         |
-| OpenMPI   | 4.0.5          | 4.0.5          |
-| UCX       | 1.7.0          | 1.9.0          |
-| GDRCopy   | 2.0            | 2.1            |
+| Software             | ComputeNode(V) | ComputeNode(A) |
+| :------------------- | -------------: | -------------: |
+| OS                   | CentOS 7.5     | RHEL 8.2       |
+| gcc                  | 7.4.0          | 8.3.1          |
+| CUDA                 | 11.2.2         | 11.2.2         |
+| OpenMPI              | 4.0.5          | 4.0.5          |
+| UCX                  | 1.7.0          | 1.9.0          |
+| GDRCopy              | 2.0            | 2.1            |
+| OSU Micro-Benchmarks | 5.7            | 5.7            |
 
 
 ## Build and Run
