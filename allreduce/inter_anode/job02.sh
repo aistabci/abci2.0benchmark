@@ -16,7 +16,7 @@ module load openmpi/4.0.5
 mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket -tag-output hostname
 module purge
 
-source ./mpi.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
-source ./mpi-cpu.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
-source ./nccl.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
+source ../mpi_anode.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
+source ../mpi-cpu_anode.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
+source ../nccl_anode.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
 
