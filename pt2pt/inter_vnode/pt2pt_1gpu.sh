@@ -31,4 +31,3 @@ mpirun -np $NMPIPROCS --map-by ppr:${NPPN}:node \
        ${PROG_BANDWIDTH} ${PROG_OPTION} D D > ${OUTPUT}.bandwidth
 
 module purge
-

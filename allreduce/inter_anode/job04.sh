@@ -19,4 +19,3 @@ module purge
 source ../mpi_anode.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
 source ../mpi-cpu_anode.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
 source ../nccl_anode.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
-

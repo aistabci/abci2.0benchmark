@@ -24,4 +24,3 @@ mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket \
        ${PROG} ${PROG_OPTION} > $OUTPUT
 
 module purge
-

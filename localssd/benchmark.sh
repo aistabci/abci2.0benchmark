@@ -15,4 +15,3 @@ rm $TEST_FILE
 # random write
 $PROGRAM -name=randwrite -loops=5 -size=1G -direct=1 -numjobs=64 -group_reporting -rw=randwrite -bs=4K -filename=$TEST_FILE > 03-randwrite.txt
 rm $TEST_FILE
-

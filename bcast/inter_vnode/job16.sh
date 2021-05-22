@@ -20,4 +20,3 @@ module purge
 source ../mpi_vnode.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
 source ../mpi-cpu_vnode.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
 source ../nccl_vnode.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
-

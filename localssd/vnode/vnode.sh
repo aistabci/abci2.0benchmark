@@ -12,4 +12,3 @@ export TEST_FILE=${SGE_LOCALDIR}/testfile
 hostname
 
 bash ../benchmark.sh
-
