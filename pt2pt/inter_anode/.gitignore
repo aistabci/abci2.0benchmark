@@ -1,6 +1,1 @@
-inter_anode_1gpu.sh.e*
-inter_anode_4gpu.sh.e*
-inter_anode_8gpu.sh.e*
-inter_anode_1prc.sh.e*
-inter_anode_4prc.sh.e*
-inter_anode_8prc.sh.e*
+job??.sh.e*

@@ -1,9 +1,8 @@
-#!/bin/sh
-#$-l rt_AF=2
-#$-cwd
-#$-l h_rt=0:10:00
+OUTPUT="${1}.gpu"
+NMPIPROCS=$2
+NPPN=$3
+NPPS=$4
 
-source /etc/profile.d/modules.sh
 module load cuda/11.2/11.2.2
 module load openmpi/4.0.5
 module load gdrcopy/2.1
@@ -15,28 +14,20 @@ WORKDIR=`pwd`
 OMBDIR=${WORKDIR}/../../programs/omb-5.7-anode/libexec/osu-micro-benchmarks
 PROG_LATENCY=${OMBDIR}/mpi/pt2pt/osu_multi_lat
 PROG_BANDWIDTH=${OMBDIR}/mpi/pt2pt/osu_mbw_mr
-PROG_OPTION="-m 4194304"
-
-# number of processes/node (GPUs)
-NPPN=8
-# total MPI processes
-NMPIPROCS=$(($NHOSTS * $NPPN))
-# number of processes/socket
-NPPS=$(($NPPN / 2))
-
-mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket -tag-output hostname
+PROG_OPTION="-m 4194304 -d cuda"
 
 mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket \
        --mca pml ucx --mca osc ucx \
        -x PATH \
        -x LD_LIBRARY_PATH \
        -x UCX_WARN_UNUSED_ENV_VARS=n \
-       ${PROG_LATENCY} ${PROG_OPTION} H H > ${JOB_NAME}.latency
+       ${PROG_LATENCY} ${PROG_OPTION} D D > ${OUTPUT}.latency
 
 mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket \
        --mca pml ucx --mca osc ucx \
        -x PATH \
        -x LD_LIBRARY_PATH \
        -x UCX_WARN_UNUSED_ENV_VARS=n \
-       ${PROG_BANDWIDTH} ${PROG_OPTION} H H > ${JOB_NAME}.bandwidth
+       ${PROG_BANDWIDTH} ${PROG_OPTION} D D > ${OUTPUT}.bandwidth
 
+module purge
