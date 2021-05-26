@@ -100,3 +100,5 @@ es1 $ qsub -g GROUP job.sh
 
 
 ## Benchmark Results
+
+See `summary_inter.ipynb` and `summary_intra.ipynb`.
