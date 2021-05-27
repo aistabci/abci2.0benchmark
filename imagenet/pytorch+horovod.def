@@ -1,0 +1,37 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/pytorch:21.04-py3
+Stage: base
+
+%files
+
+%post
+# Load Docker environments
+. /.singularity.d/env/10-docker2singularity.sh
+
+# Set working directory
+cd /workspace
+
+# Install Horovod
+conda install -y gxx_linux-64==7.3.0
+
+HOROVOD_NCCL_INCLUDE=/usr/include \
+HOROVOD_NCCL_LIB=/usr/lib/x86_64-linux-gnu \
+HOROVOD_NCCL_LINK=SHARED \
+HOROVOD_GPU_OPERATIONS=NCCL \
+HOROVOD_WITH_PYTORCH=1 \
+pip install --no-cache-dir horovod[pytorch]==0.22.0
+
+# Download Horovod examples
+git clone https://github.com/horovod/horovod.git
+cd horovod
+git checkout v0.22.0
+
+%environment
+
+%runscript
+cd /workspace
+exec /bin/bash "$@"
+
+%startscript
+cd /workspace
+exec /bin/bash "$@"
