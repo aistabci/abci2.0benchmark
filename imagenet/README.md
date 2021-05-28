@@ -1,9 +1,11 @@
 # Benchmark of Training ResNet50 using ImageNet
 
-| Software             | Version   |
-| :------------------- | --------: |
-| Singularity Pro      | 3.7       |
-| NVIDIA PyTorch Image | 21.04-py3 |
+| Software                | Version       |
+| :---------------------- | ------------: |
+| Singularity Pro         | 3.7           |
+| NVIDIA PyTorch Image    | 21.04-py3     |
+| NVIDIA TensorFlow Image | 21.04-tf2-py3 |
+| Horovod                 | 0.22.0        |
 
 Reference
 
@@ -12,15 +14,29 @@ Reference
 
 ## Prepare The Container Image
 
-Download PyTorch container image from NGC Container Registry.
+Download PyTorch and TensorFlow container images from NGC Container Registry.
 
 ```Console
 es1 $ cd programs
 es1 $ module load singularitypro/3.7
 es1 $ singularity pull docker://nvcr.io/nvidia/pytorch:21.04-py3
+es1 $ singularity pull docker://nvcr.io/nvidia/tensorflow:21.04-tf2-py3
 es1 $ ls -1
 ...
 pytorch_21.04-py3.sif
+tensorflow_21.04-tf2-py3.sif
+...
+```
+
+Build a Horovod + PyTorch container image using a container definition file.
+
+```Console
+es1 $ cd programs
+es1 $ module load singularitypro/3.7
+es1 $ singularity build --fakeroot pytorch+horovod.sif ../imagenet/pytorch+horovod.def
+es1 $ ls -1
+...
+pytorch+horovod.sif
 ...
 ```
 
@@ -48,38 +64,16 @@ Reference
 
 ## Run Benchmarks
 
-Go into each benchmark directory, like `a100x1`, and submit a job script in the directory.
+Go into each benchmark directory, like `anode_single`, and submit job scripts in the directory.
+Do not submit multiple jobs under the directories because these job scripts generate files with the same names, like `GPU_1.log`.
 
 ```Console
 es1 $ cd imagenet
-es1 $ cd a100x1
-es1 $ qsub -g GROUP a100x1.sh
+es1 $ cd anode_single
+es1 $ qsub -g GROUP job_gpu1.sh
 ```
 
 
 ## Benchmark Results
 
-### ComputeNode(A) TF32 vs ComputeNode(V) FP32
-
-The unit is images per second.
-
-| Hardware        | GPU x Count  | Performance |
-| :-------------- | -----------: | ----------: |
-| ComputeNode(A)  | A100 x 1     | 771.79      |
-| ComputeNode(A)  | A100 x 4     | 3160.13     |
-| ComputeNode(A)  | A100 x 8     | 6102.28     |
-| ComputeNode(V)  | V100 x 1     | 367.07      |
-| ComputeNode(V)  | V100 x 4     | 1446.99     |
-
-
-### ComputeNode(A) vs ComputeNode(V) using PyTorch AMP
-
-The unit is images per second.
-
-| Hardware        | GPU x Count  | Performance |
-| :-------------- | -----------: | ----------: |
-| ComputeNode(A)  | A100 x 1     | 1251.82     |
-| ComputeNode(A)  | A100 x 4     | 4638.79     |
-| ComputeNode(A)  | A100 x 8     | 8856.24     |
-| ComputeNode(V)  | V100 x 1     | 804.69      |
-| ComputeNode(V)  | V100 x 4     | 3243.58     |
+See `summary_single.ipynb` and `summary_multi.ipynb`.
