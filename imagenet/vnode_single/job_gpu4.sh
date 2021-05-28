@@ -1,0 +1,14 @@
+#!/bin/sh
+#$-l rt_F=1
+#$-cwd
+#$-l h_rt=00:30:00
+
+source /etc/profile.d/modules.sh
+module load singularitypro/3.7
+source ../single_common.sh
+
+NGPUS=4
+BATCH_SIZE=128
+
+source ../single_run.sh
+source ../single_run_amp.sh
