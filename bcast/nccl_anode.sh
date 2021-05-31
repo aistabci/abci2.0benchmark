@@ -17,7 +17,7 @@ mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket \
        -x PATH \
        -x LD_LIBRARY_PATH \
        -x UCX_WARN_UNUSED_ENV_VARS=n \
-       -x NCCL_IB_CUDA_SUPPORT=1 \
+       -x NCCL_NET_GDR_LEVEL=2 \
        ${PROG} ${PROG_OPTION} > $OUTPUT
 
 module purge
