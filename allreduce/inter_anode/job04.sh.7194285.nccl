@@ -1,0 +1,66 @@
+# nThread 1 nGpus 1 minBytes 4 maxBytes 33554432 step: 2(factor) warmup iters: 5 iters: 100 validation: 1 
+#
+# Using devices
+#   Rank  0 Pid 2174497 on      a0008 device  0 [0x27] A100-SXM4-40GB
+#   Rank  1 Pid 2174498 on      a0008 device  1 [0x2a] A100-SXM4-40GB
+#   Rank  2 Pid 2174499 on      a0008 device  2 [0x51] A100-SXM4-40GB
+#   Rank  3 Pid 2174500 on      a0008 device  3 [0x57] A100-SXM4-40GB
+#   Rank  4 Pid 2174501 on      a0008 device  4 [0x9e] A100-SXM4-40GB
+#   Rank  5 Pid 2174502 on      a0008 device  5 [0xa4] A100-SXM4-40GB
+#   Rank  6 Pid 2174505 on      a0008 device  6 [0xc7] A100-SXM4-40GB
+#   Rank  7 Pid 2174506 on      a0008 device  7 [0xca] A100-SXM4-40GB
+#   Rank  8 Pid 2283675 on      a0009 device  0 [0x27] A100-SXM4-40GB
+#   Rank  9 Pid 2283676 on      a0009 device  1 [0x2a] A100-SXM4-40GB
+#   Rank 10 Pid 2283677 on      a0009 device  2 [0x51] A100-SXM4-40GB
+#   Rank 11 Pid 2283678 on      a0009 device  3 [0x57] A100-SXM4-40GB
+#   Rank 12 Pid 2283679 on      a0009 device  4 [0x9e] A100-SXM4-40GB
+#   Rank 13 Pid 2283680 on      a0009 device  5 [0xa4] A100-SXM4-40GB
+#   Rank 14 Pid 2283681 on      a0009 device  6 [0xc7] A100-SXM4-40GB
+#   Rank 15 Pid 2283684 on      a0009 device  7 [0xca] A100-SXM4-40GB
+#   Rank 16 Pid 2067534 on      a0010 device  0 [0x27] A100-SXM4-40GB
+#   Rank 17 Pid 2067535 on      a0010 device  1 [0x2a] A100-SXM4-40GB
+#   Rank 18 Pid 2067536 on      a0010 device  2 [0x51] A100-SXM4-40GB
+#   Rank 19 Pid 2067537 on      a0010 device  3 [0x57] A100-SXM4-40GB
+#   Rank 20 Pid 2067538 on      a0010 device  4 [0x9e] A100-SXM4-40GB
+#   Rank 21 Pid 2067539 on      a0010 device  5 [0xa4] A100-SXM4-40GB
+#   Rank 22 Pid 2067540 on      a0010 device  6 [0xc7] A100-SXM4-40GB
+#   Rank 23 Pid 2067541 on      a0010 device  7 [0xca] A100-SXM4-40GB
+#   Rank 24 Pid 2153338 on      a0013 device  0 [0x27] A100-SXM4-40GB
+#   Rank 25 Pid 2153341 on      a0013 device  1 [0x2a] A100-SXM4-40GB
+#   Rank 26 Pid 2153342 on      a0013 device  2 [0x51] A100-SXM4-40GB
+#   Rank 27 Pid 2153343 on      a0013 device  3 [0x57] A100-SXM4-40GB
+#   Rank 28 Pid 2153344 on      a0013 device  4 [0x9e] A100-SXM4-40GB
+#   Rank 29 Pid 2153345 on      a0013 device  5 [0xa4] A100-SXM4-40GB
+#   Rank 30 Pid 2153346 on      a0013 device  6 [0xc7] A100-SXM4-40GB
+#   Rank 31 Pid 2153347 on      a0013 device  7 [0xca] A100-SXM4-40GB
+#
+#                                                     out-of-place                       in-place          
+#       size         count    type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                     (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+           4             1   float     sum    42.34    0.00    0.00  0e+00    42.15    0.00    0.00  2e-07
+           8             2   float     sum    42.03    0.00    0.00  2e-07    41.82    0.00    0.00  2e-07
+          16             4   float     sum    42.31    0.00    0.00  2e-07    42.16    0.00    0.00  2e-07
+          32             8   float     sum    42.77    0.00    0.00  4e-07    42.32    0.00    0.00  4e-07
+          64            16   float     sum    42.99    0.00    0.00  4e-07    42.64    0.00    0.00  4e-07
+         128            32   float     sum    43.56    0.00    0.01  4e-07    43.04    0.00    0.01  4e-07
+         256            64   float     sum    46.63    0.01    0.01  4e-07    45.95    0.01    0.01  2e-07
+         512           128   float     sum    47.58    0.01    0.02  2e-07    47.00    0.01    0.02  2e-07
+        1024           256   float     sum    50.20    0.02    0.04  5e-07    49.95    0.02    0.04  5e-07
+        2048           512   float     sum    53.70    0.04    0.07  5e-07    52.74    0.04    0.08  5e-07
+        4096          1024   float     sum    55.59    0.07    0.14  5e-07    55.11    0.07    0.14  5e-07
+        8192          2048   float     sum    56.20    0.15    0.28  5e-07    55.57    0.15    0.29  5e-07
+       16384          4096   float     sum    59.70    0.27    0.53  5e-07    58.63    0.28    0.54  5e-07
+       32768          8192   float     sum    63.81    0.51    0.99  5e-07    62.98    0.52    1.01  5e-07
+       65536         16384   float     sum    76.42    0.86    1.66  5e-07    74.61    0.88    1.70  5e-07
+      131072         32768   float     sum    105.5    1.24    2.41  5e-07    104.7    1.25    2.42  5e-07
+      262144         65536   float     sum    113.4    2.31    4.48  5e-07    110.6    2.37    4.59  5e-07
+      524288        131072   float     sum    127.7    4.11    7.96  5e-07    124.9    4.20    8.14  5e-07
+     1048576        262144   float     sum    153.5    6.83   13.23  5e-07    150.7    6.96   13.48  5e-07
+     2097152        524288   float     sum    226.6    9.25   17.93  5e-07    227.6    9.22   17.86  5e-07
+     4194304       1048576   float     sum    367.5   11.41   22.11  5e-07    362.4   11.58   22.43  5e-07
+     8388608       2097152   float     sum    567.1   14.79   28.66  1e-06    581.9   14.42   27.93  1e-06
+    16777216       4194304   float     sum   1090.2   15.39   29.82  1e-06   1079.1   15.55   30.12  1e-06
+    33554432       8388608   float     sum   2075.4   16.17   31.33  1e-06   2074.6   16.17   31.34  1e-06
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 6.74639 
+#

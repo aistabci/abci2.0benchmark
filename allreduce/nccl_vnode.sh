@@ -1,7 +1,4 @@
-OUTPUT="${1}.nccl"
-NMPIPROCS=$2
-NPPN=$3
-NPPS=$4
+OUTPUT="${OUTPUT_PREFIX}.nccl"
 
 module load gcc/7.4.0
 module load openmpi/4.0.5
