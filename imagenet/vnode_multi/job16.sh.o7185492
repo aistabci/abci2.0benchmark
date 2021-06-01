@@ -1,0 +1,18 @@
+[1,0]<stdout>:g0341.abci.local
+[1,15]<stdout>:g0356.abci.local
+[1,6]<stdout>:g0347.abci.local
+[1,8]<stdout>:g0349.abci.local
+[1,5]<stdout>:g0346.abci.local
+[1,13]<stdout>:g0354.abci.local
+[1,11]<stdout>:g0352.abci.local
+[1,7]<stdout>:g0348.abci.local
+[1,3]<stdout>:g0344.abci.local
+[1,10]<stdout>:g0351.abci.local
+[1,4]<stdout>:g0345.abci.local
+[1,14]<stdout>:g0355.abci.local
+[1,9]<stdout>:g0350.abci.local
+[1,12]<stdout>:g0353.abci.local
+[1,2]<stdout>:g0343.abci.local
+[1,1]<stdout>:g0342.abci.local
+Time for stage-in: 178
+Time for train: 6242.00

@@ -1,0 +1,34 @@
+[1,0]<stdout>:g0341.abci.local
+[1,23]<stdout>:g0364.abci.local
+[1,22]<stdout>:g0363.abci.local
+[1,14]<stdout>:g0355.abci.local
+[1,31]<stdout>:g0374.abci.local
+[1,1]<stdout>:g0342.abci.local
+[1,6]<stdout>:g0347.abci.local
+[1,2]<stdout>:g0343.abci.local
+[1,19]<stdout>:g0360.abci.local
+[1,21]<stdout>:g0362.abci.local
+[1,7]<stdout>:g0348.abci.local
+[1,25]<stdout>:g0367.abci.local
+[1,15]<stdout>:g0356.abci.local
+[1,5]<stdout>:g0346.abci.local
+[1,17]<stdout>:g0358.abci.local
+[1,13]<stdout>:g0354.abci.local
+[1,20]<stdout>:g0361.abci.local
+[1,3]<stdout>:g0344.abci.local
+[1,26]<stdout>:g0369.abci.local
+[1,8]<stdout>:g0349.abci.local
+[1,27]<stdout>:g0370.abci.local
+[1,30]<stdout>:g0373.abci.local
+[1,18]<stdout>:g0359.abci.local
+[1,10]<stdout>:g0351.abci.local
+[1,16]<stdout>:g0357.abci.local
+[1,9]<stdout>:g0350.abci.local
+[1,29]<stdout>:g0372.abci.local
+[1,4]<stdout>:g0345.abci.local
+[1,12]<stdout>:g0353.abci.local
+[1,28]<stdout>:g0371.abci.local
+[1,11]<stdout>:g0352.abci.local
+[1,24]<stdout>:g0365.abci.local
+Time for stage-in: 261
+Time for train: 3321.17

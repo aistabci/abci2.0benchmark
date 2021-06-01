@@ -1,0 +1,10 @@
+[1,0]<stdout>:a0062.abci.local
+[1,1]<stdout>:a0067.abci.local
+[1,2]<stdout>:a0070.abci.local
+[1,5]<stdout>:a0075.abci.local
+[1,4]<stdout>:a0074.abci.local
+[1,7]<stdout>:a0079.abci.local
+[1,3]<stdout>:a0071.abci.local
+[1,6]<stdout>:a0078.abci.local
+Time for stage-in: 125
+Time for train: 3432.30
