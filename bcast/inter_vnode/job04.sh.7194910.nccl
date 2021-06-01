@@ -1,0 +1,66 @@
+[1622514211.270349] [g0243:211333:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514211.270358] [g0243:211334:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514211.270563] [g0243:211331:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514211.270560] [g0243:211332:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514211.504454] [g0240:27619:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514211.504463] [g0240:27620:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514211.504641] [g0240:27621:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514211.504656] [g0240:27622:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514211.524961] [g0249:44548:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514211.524966] [g0249:44549:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514211.525070] [g0249:44551:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514211.525091] [g0249:44550:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514216.053406] [g0248:73977:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514216.053313] [g0248:73991:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514216.054113] [g0248:73992:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1622514216.054315] [g0248:73993:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+# nThread 1 nGpus 1 minBytes 4 maxBytes 33554432 step: 2(factor) warmup iters: 5 iters: 100 validation: 1 
+#
+# Using devices
+#   Rank  0 Pid  27619 on      g0240 device  0 [0x3d] Tesla V100-SXM2-16GB
+#   Rank  1 Pid  27620 on      g0240 device  1 [0x3e] Tesla V100-SXM2-16GB
+#   Rank  2 Pid  27621 on      g0240 device  2 [0xb1] Tesla V100-SXM2-16GB
+#   Rank  3 Pid  27622 on      g0240 device  3 [0xb2] Tesla V100-SXM2-16GB
+#   Rank  4 Pid 211331 on      g0243 device  0 [0x3d] Tesla V100-SXM2-16GB
+#   Rank  5 Pid 211332 on      g0243 device  1 [0x3e] Tesla V100-SXM2-16GB
+#   Rank  6 Pid 211333 on      g0243 device  2 [0xb1] Tesla V100-SXM2-16GB
+#   Rank  7 Pid 211334 on      g0243 device  3 [0xb2] Tesla V100-SXM2-16GB
+#   Rank  8 Pid  73977 on      g0248 device  0 [0x3d] Tesla V100-SXM2-16GB
+#   Rank  9 Pid  73991 on      g0248 device  1 [0x3e] Tesla V100-SXM2-16GB
+#   Rank 10 Pid  73992 on      g0248 device  2 [0xb1] Tesla V100-SXM2-16GB
+#   Rank 11 Pid  73993 on      g0248 device  3 [0xb2] Tesla V100-SXM2-16GB
+#   Rank 12 Pid  44548 on      g0249 device  0 [0x3d] Tesla V100-SXM2-16GB
+#   Rank 13 Pid  44549 on      g0249 device  1 [0x3e] Tesla V100-SXM2-16GB
+#   Rank 14 Pid  44550 on      g0249 device  2 [0xb1] Tesla V100-SXM2-16GB
+#   Rank 15 Pid  44551 on      g0249 device  3 [0xb2] Tesla V100-SXM2-16GB
+#
+#                                                     out-of-place                       in-place          
+#       size         count    type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                     (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+           4             1   float       0     5.49    0.00    0.00  0e+00     5.59    0.00    0.00  0e+00
+           8             2   float       0     4.86    0.00    0.00  0e+00     4.87    0.00    0.00  0e+00
+          16             4   float       0     4.94    0.00    0.00  0e+00     4.84    0.00    0.00  0e+00
+          32             8   float       0     4.86    0.01    0.01  0e+00     4.85    0.01    0.01  0e+00
+          64            16   float       0     4.88    0.01    0.01  0e+00     4.85    0.01    0.01  0e+00
+         128            32   float       0     4.85    0.03    0.03  0e+00     4.85    0.03    0.03  0e+00
+         256            64   float       0     4.87    0.05    0.05  0e+00     4.84    0.05    0.05  0e+00
+         512           128   float       0     4.87    0.11    0.11  0e+00     4.85    0.11    0.11  0e+00
+        1024           256   float       0     5.25    0.20    0.20  0e+00     5.23    0.20    0.20  0e+00
+        2048           512   float       0     6.97    0.29    0.29  0e+00     6.93    0.30    0.30  0e+00
+        4096          1024   float       0    10.49    0.39    0.39  0e+00    10.42    0.39    0.39  0e+00
+        8192          2048   float       0    17.76    0.46    0.46  0e+00    17.79    0.46    0.46  0e+00
+       16384          4096   float       0    18.48    0.89    0.89  0e+00    18.48    0.89    0.89  0e+00
+       32768          8192   float       0    20.55    1.59    1.59  0e+00    20.37    1.61    1.61  0e+00
+       65536         16384   float       0    29.56    2.22    2.22  0e+00    29.25    2.24    2.24  0e+00
+      131072         32768   float       0    79.88    1.64    1.64  0e+00    68.18    1.92    1.92  0e+00
+      262144         65536   float       0    108.9    2.41    2.41  0e+00    81.88    3.20    3.20  0e+00
+      524288        131072   float       0    117.4    4.47    4.47  0e+00    117.0    4.48    4.48  0e+00
+     1048576        262144   float       0    178.2    5.88    5.88  0e+00    192.4    5.45    5.45  0e+00
+     2097152        524288   float       0    300.0    6.99    6.99  0e+00    297.2    7.06    7.06  0e+00
+     4194304       1048576   float       0    849.8    4.94    4.94  0e+00    868.3    4.83    4.83  0e+00
+     8388608       2097152   float       0   1627.0    5.16    5.16  0e+00   1641.0    5.11    5.11  0e+00
+    16777216       4194304   float       0   6827.7    2.46    2.46  0e+00   5383.3    3.12    3.12  0e+00
+    33554432       8388608   float       0    17065    1.97    1.97  0e+00    17919    1.87    1.87  0e+00
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.78095 
+#

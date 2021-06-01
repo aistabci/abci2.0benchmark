@@ -5,6 +5,8 @@
 
 source /etc/profile.d/modules.sh
 
+OUTPUT_PREFIX=${JOB_NAME}.${JOB_ID}
+
 # number of processes/node (GPUs)
 NPPN=4
 # total MPI processes
@@ -17,6 +19,6 @@ module load openmpi/4.0.5
 mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket -tag-output hostname
 module purge
 
-source ../mpi_vnode.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
-source ../mpi-cpu_vnode.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
-source ../nccl_vnode.sh "${JOB_NAME}.${JOB_ID}" $NMPIPROCS $NPPN $NPPS
+source ../mpi_vnode.sh
+source ../mpi-cpu_vnode.sh
+source ../nccl_vnode.sh

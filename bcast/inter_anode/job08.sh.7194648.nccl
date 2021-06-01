@@ -1,0 +1,98 @@
+# nThread 1 nGpus 1 minBytes 4 maxBytes 33554432 step: 2(factor) warmup iters: 5 iters: 100 validation: 1 
+#
+# Using devices
+#   Rank  0 Pid 346567 on      a0021 device  0 [0x27] A100-SXM4-40GB
+#   Rank  1 Pid 346568 on      a0021 device  1 [0x2a] A100-SXM4-40GB
+#   Rank  2 Pid 346569 on      a0021 device  2 [0x51] A100-SXM4-40GB
+#   Rank  3 Pid 346570 on      a0021 device  3 [0x57] A100-SXM4-40GB
+#   Rank  4 Pid 346571 on      a0021 device  4 [0x9e] A100-SXM4-40GB
+#   Rank  5 Pid 346572 on      a0021 device  5 [0xa4] A100-SXM4-40GB
+#   Rank  6 Pid 346573 on      a0021 device  6 [0xc7] A100-SXM4-40GB
+#   Rank  7 Pid 346576 on      a0021 device  7 [0xca] A100-SXM4-40GB
+#   Rank  8 Pid 1777145 on      a0022 device  0 [0x27] A100-SXM4-40GB
+#   Rank  9 Pid 1777146 on      a0022 device  1 [0x2a] A100-SXM4-40GB
+#   Rank 10 Pid 1777147 on      a0022 device  2 [0x51] A100-SXM4-40GB
+#   Rank 11 Pid 1777148 on      a0022 device  3 [0x57] A100-SXM4-40GB
+#   Rank 12 Pid 1777149 on      a0022 device  4 [0x9e] A100-SXM4-40GB
+#   Rank 13 Pid 1777150 on      a0022 device  5 [0xa4] A100-SXM4-40GB
+#   Rank 14 Pid 1777151 on      a0022 device  6 [0xc7] A100-SXM4-40GB
+#   Rank 15 Pid 1777154 on      a0022 device  7 [0xca] A100-SXM4-40GB
+#   Rank 16 Pid 2190246 on      a0023 device  0 [0x27] A100-SXM4-40GB
+#   Rank 17 Pid 2190250 on      a0023 device  1 [0x2a] A100-SXM4-40GB
+#   Rank 18 Pid 2190251 on      a0023 device  2 [0x51] A100-SXM4-40GB
+#   Rank 19 Pid 2190252 on      a0023 device  3 [0x57] A100-SXM4-40GB
+#   Rank 20 Pid 2190253 on      a0023 device  4 [0x9e] A100-SXM4-40GB
+#   Rank 21 Pid 2190254 on      a0023 device  5 [0xa4] A100-SXM4-40GB
+#   Rank 22 Pid 2190255 on      a0023 device  6 [0xc7] A100-SXM4-40GB
+#   Rank 23 Pid 2190258 on      a0023 device  7 [0xca] A100-SXM4-40GB
+#   Rank 24 Pid 1664783 on      a0025 device  0 [0x27] A100-SXM4-40GB
+#   Rank 25 Pid 1664787 on      a0025 device  1 [0x2a] A100-SXM4-40GB
+#   Rank 26 Pid 1664788 on      a0025 device  2 [0x51] A100-SXM4-40GB
+#   Rank 27 Pid 1664789 on      a0025 device  3 [0x57] A100-SXM4-40GB
+#   Rank 28 Pid 1664790 on      a0025 device  4 [0x9e] A100-SXM4-40GB
+#   Rank 29 Pid 1664791 on      a0025 device  5 [0xa4] A100-SXM4-40GB
+#   Rank 30 Pid 1664794 on      a0025 device  6 [0xc7] A100-SXM4-40GB
+#   Rank 31 Pid 1664795 on      a0025 device  7 [0xca] A100-SXM4-40GB
+#   Rank 32 Pid 1580052 on      a0026 device  0 [0x27] A100-SXM4-40GB
+#   Rank 33 Pid 1580053 on      a0026 device  1 [0x2a] A100-SXM4-40GB
+#   Rank 34 Pid 1580054 on      a0026 device  2 [0x51] A100-SXM4-40GB
+#   Rank 35 Pid 1580055 on      a0026 device  3 [0x57] A100-SXM4-40GB
+#   Rank 36 Pid 1580056 on      a0026 device  4 [0x9e] A100-SXM4-40GB
+#   Rank 37 Pid 1580057 on      a0026 device  5 [0xa4] A100-SXM4-40GB
+#   Rank 38 Pid 1580058 on      a0026 device  6 [0xc7] A100-SXM4-40GB
+#   Rank 39 Pid 1580061 on      a0026 device  7 [0xca] A100-SXM4-40GB
+#   Rank 40 Pid 2183440 on      a0027 device  0 [0x27] A100-SXM4-40GB
+#   Rank 41 Pid 2183441 on      a0027 device  1 [0x2a] A100-SXM4-40GB
+#   Rank 42 Pid 2183442 on      a0027 device  2 [0x51] A100-SXM4-40GB
+#   Rank 43 Pid 2183443 on      a0027 device  3 [0x57] A100-SXM4-40GB
+#   Rank 44 Pid 2183444 on      a0027 device  4 [0x9e] A100-SXM4-40GB
+#   Rank 45 Pid 2183445 on      a0027 device  5 [0xa4] A100-SXM4-40GB
+#   Rank 46 Pid 2183448 on      a0027 device  6 [0xc7] A100-SXM4-40GB
+#   Rank 47 Pid 2183449 on      a0027 device  7 [0xca] A100-SXM4-40GB
+#   Rank 48 Pid 340652 on      a0028 device  0 [0x27] A100-SXM4-40GB
+#   Rank 49 Pid 340653 on      a0028 device  1 [0x2a] A100-SXM4-40GB
+#   Rank 50 Pid 340654 on      a0028 device  2 [0x51] A100-SXM4-40GB
+#   Rank 51 Pid 340655 on      a0028 device  3 [0x57] A100-SXM4-40GB
+#   Rank 52 Pid 340656 on      a0028 device  4 [0x9e] A100-SXM4-40GB
+#   Rank 53 Pid 340657 on      a0028 device  5 [0xa4] A100-SXM4-40GB
+#   Rank 54 Pid 340660 on      a0028 device  6 [0xc7] A100-SXM4-40GB
+#   Rank 55 Pid 340661 on      a0028 device  7 [0xca] A100-SXM4-40GB
+#   Rank 56 Pid 1641860 on      a0029 device  0 [0x27] A100-SXM4-40GB
+#   Rank 57 Pid 1641861 on      a0029 device  1 [0x2a] A100-SXM4-40GB
+#   Rank 58 Pid 1641862 on      a0029 device  2 [0x51] A100-SXM4-40GB
+#   Rank 59 Pid 1641863 on      a0029 device  3 [0x57] A100-SXM4-40GB
+#   Rank 60 Pid 1641864 on      a0029 device  4 [0x9e] A100-SXM4-40GB
+#   Rank 61 Pid 1641865 on      a0029 device  5 [0xa4] A100-SXM4-40GB
+#   Rank 62 Pid 1641867 on      a0029 device  6 [0xc7] A100-SXM4-40GB
+#   Rank 63 Pid 1641869 on      a0029 device  7 [0xca] A100-SXM4-40GB
+#
+#                                                     out-of-place                       in-place          
+#       size         count    type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                     (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+           4             1   float       0     7.77    0.00    0.00  0e+00     7.50    0.00    0.00  0e+00
+           8             2   float       0     7.66    0.00    0.00  0e+00     7.36    0.00    0.00  0e+00
+          16             4   float       0     7.69    0.00    0.00  0e+00     7.38    0.00    0.00  0e+00
+          32             8   float       0     7.71    0.00    0.00  0e+00     7.39    0.00    0.00  0e+00
+          64            16   float       0     7.84    0.01    0.01  0e+00     7.38    0.01    0.01  0e+00
+         128            32   float       0     7.73    0.02    0.02  0e+00     7.35    0.02    0.02  0e+00
+         256            64   float       0     7.81    0.03    0.03  0e+00     7.47    0.03    0.03  0e+00
+         512           128   float       0     7.82    0.07    0.07  0e+00     7.55    0.07    0.07  0e+00
+        1024           256   float       0     8.35    0.12    0.12  0e+00     7.88    0.13    0.13  0e+00
+        2048           512   float       0     9.28    0.22    0.22  0e+00     8.47    0.24    0.24  0e+00
+        4096          1024   float       0    11.43    0.36    0.36  0e+00    10.18    0.40    0.40  0e+00
+        8192          2048   float       0    14.43    0.57    0.57  0e+00    12.97    0.63    0.63  0e+00
+       16384          4096   float       0    22.30    0.73    0.73  0e+00    19.25    0.85    0.85  0e+00
+       32768          8192   float       0    38.31    0.86    0.86  0e+00    31.55    1.04    1.04  0e+00
+       65536         16384   float       0    44.12    1.49    1.49  0e+00    35.86    1.83    1.83  0e+00
+      131072         32768   float       0    50.97    2.57    2.57  0e+00    43.42    3.02    3.02  0e+00
+      262144         65536   float       0    84.31    3.11    3.11  0e+00    84.92    3.09    3.09  0e+00
+      524288        131072   float       0    227.7    2.30    2.30  0e+00    230.4    2.28    2.28  0e+00
+     1048576        262144   float       0    401.3    2.61    2.61  0e+00    429.7    2.44    2.44  0e+00
+     2097152        524288   float       0    807.2    2.60    2.60  0e+00    808.6    2.59    2.59  0e+00
+     4194304       1048576   float       0    867.5    4.83    4.83  0e+00    867.7    4.83    4.83  0e+00
+     8388608       2097152   float       0   1288.2    6.51    6.51  0e+00   1291.6    6.49    6.49  0e+00
+    16777216       4194304   float       0   1769.3    9.48    9.48  0e+00   1768.5    9.49    9.49  0e+00
+    33554432       8388608   float       0   3389.5    9.90    9.90  0e+00   3394.2    9.89    9.89  0e+00
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.03696 
+#

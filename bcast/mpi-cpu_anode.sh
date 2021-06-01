@@ -1,7 +1,4 @@
-OUTPUT="${1}.mpi-cpu"
-NMPIPROCS=$2
-NPPN=$3
-NPPS=$4
+OUTPUT="${OUTPUT_PREFIX}.mpi-cpu"
 
 module load cuda/11.2/11.2.2
 module load openmpi/4.0.5
