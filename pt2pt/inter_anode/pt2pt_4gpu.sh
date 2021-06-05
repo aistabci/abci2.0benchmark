@@ -1,7 +1,4 @@
-OUTPUT="${1}.gpu"
-NMPIPROCS=$2
-NPPN=$3
-NPPS=$4
+OUTPUT="${OUTPUT_PREFIX}.gpu"
 
 module load cuda/11.2/11.2.2
 module load openmpi/4.0.5
@@ -21,7 +18,7 @@ mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket \
        -x PATH \
        -x LD_LIBRARY_PATH \
        -x UCX_WARN_UNUSED_ENV_VARS=n \
-       ./gpuid_4gpu_.sh \
+       ./gpuid_4gpu.sh \
        ${PROG_LATENCY} ${PROG_OPTION} D D > ${OUTPUT}.latency
 
 mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket \
@@ -29,7 +26,7 @@ mpirun -np $NMPIPROCS --map-by ppr:${NPPS}:socket \
        -x PATH \
        -x LD_LIBRARY_PATH \
        -x UCX_WARN_UNUSED_ENV_VARS=n \
-       ./gpuid_4gpu_.sh \
+       ./gpuid_4gpu.sh \
        ${PROG_BANDWIDTH} ${PROG_OPTION} D D > ${OUTPUT}.bandwidth
 
 module purge

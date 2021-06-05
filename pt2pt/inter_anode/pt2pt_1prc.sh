@@ -1,6 +1,4 @@
-OUTPUT="${1}.prc"
-NMPIPROCS=$2
-NPPN=$3
+OUTPUT="${OUTPUT_PREFIX}.prc"
 
 module load cuda/11.2/11.2.2
 module load openmpi/4.0.5

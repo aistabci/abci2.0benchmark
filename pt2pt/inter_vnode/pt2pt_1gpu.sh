@@ -1,6 +1,4 @@
-OUTPUT="${1}.gpu"
-NMPIPROCS=$2
-NPPN=$3
+OUTPUT="${OUTPUT_PREFIX}.gpu"
 
 module load cuda/11.2/11.2.2
 module load gcc/7.4.0
