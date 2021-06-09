@@ -1,0 +1,42 @@
+[1623231099.720529] [g0037:191578:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1623231099.720497] [g0037:191579:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1623231099.720578] [g0037:191580:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1623231099.720577] [g0037:191581:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+# nThread 1 nGpus 1 minBytes 4 maxBytes 33554432 step: 2(factor) warmup iters: 5 iters: 100 validation: 1 
+#
+# Using devices
+#   Rank  0 Pid 191578 on      g0037 device  0 [0x3d] Tesla V100-SXM2-16GB
+#   Rank  1 Pid 191579 on      g0037 device  1 [0x3e] Tesla V100-SXM2-16GB
+#   Rank  2 Pid 191580 on      g0037 device  2 [0xb1] Tesla V100-SXM2-16GB
+#   Rank  3 Pid 191581 on      g0037 device  3 [0xb2] Tesla V100-SXM2-16GB
+#
+#                                                     out-of-place                       in-place          
+#       size         count    type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                     (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+           4             1   float     sum     8.48    0.00    0.00  1e-07     8.34    0.00    0.00  0e+00
+           8             2   float     sum     8.19    0.00    0.00  0e+00     8.09    0.00    0.00  0e+00
+          16             4   float     sum     8.14    0.00    0.00  3e-08     8.09    0.00    0.00  3e-08
+          32             8   float     sum     8.28    0.00    0.01  3e-08     8.12    0.00    0.01  3e-08
+          64            16   float     sum     8.30    0.01    0.01  3e-08     8.19    0.01    0.01  3e-08
+         128            32   float     sum     8.44    0.02    0.02  3e-08     8.30    0.02    0.02  3e-08
+         256            64   float     sum     8.46    0.03    0.05  3e-08     8.41    0.03    0.05  1e-08
+         512           128   float     sum     8.73    0.06    0.09  1e-08     8.64    0.06    0.09  1e-08
+        1024           256   float     sum     9.42    0.11    0.16  1e-07     9.26    0.11    0.17  1e-07
+        2048           512   float     sum    10.43    0.20    0.29  1e-07    10.05    0.20    0.31  1e-07
+        4096          1024   float     sum    10.99    0.37    0.56  2e-07    10.52    0.39    0.58  2e-07
+        8192          2048   float     sum    13.27    0.62    0.93  2e-07    12.82    0.64    0.96  2e-07
+       16384          4096   float     sum    17.14    0.96    1.43  2e-07    16.63    0.99    1.48  2e-07
+       32768          8192   float     sum    20.23    1.62    2.43  2e-07    19.79    1.66    2.48  2e-07
+       65536         16384   float     sum    22.33    2.94    4.40  2e-07    22.05    2.97    4.46  2e-07
+      131072         32768   float     sum    26.11    5.02    7.53  2e-07    25.96    5.05    7.57  2e-07
+      262144         65536   float     sum    34.12    7.68   11.52  2e-07    33.93    7.73   11.59  2e-07
+      524288        131072   float     sum    64.35    8.15   12.22  2e-07    63.89    8.21   12.31  2e-07
+     1048576        262144   float     sum    79.05   13.26   19.90  2e-07    78.63   13.34   20.00  2e-07
+     2097152        524288   float     sum    103.0   20.37   30.55  2e-07    103.2   20.31   30.47  2e-07
+     4194304       1048576   float     sum    101.2   41.45   62.18  2e-07    100.3   41.81   62.72  2e-07
+     8388608       2097152   float     sum    148.7   56.40   84.59  2e-07    147.9   56.71   85.07  2e-07
+    16777216       4194304   float     sum    254.5   65.91   98.87  2e-07    253.1   66.29   99.43  2e-07
+    33554432       8388608   float     sum    447.3   75.01  112.52  2e-07    447.7   74.95  112.43  2e-07
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 18.8014 
+#

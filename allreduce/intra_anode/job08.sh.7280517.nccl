@@ -1,0 +1,42 @@
+# nThread 1 nGpus 1 minBytes 4 maxBytes 33554432 step: 2(factor) warmup iters: 5 iters: 100 validation: 1 
+#
+# Using devices
+#   Rank  0 Pid 1235813 on      a0048 device  0 [0x27] A100-SXM4-40GB
+#   Rank  1 Pid 1235814 on      a0048 device  1 [0x2a] A100-SXM4-40GB
+#   Rank  2 Pid 1235815 on      a0048 device  2 [0x51] A100-SXM4-40GB
+#   Rank  3 Pid 1235816 on      a0048 device  3 [0x57] A100-SXM4-40GB
+#   Rank  4 Pid 1235817 on      a0048 device  4 [0x9e] A100-SXM4-40GB
+#   Rank  5 Pid 1235818 on      a0048 device  5 [0xa4] A100-SXM4-40GB
+#   Rank  6 Pid 1235819 on      a0048 device  6 [0xc7] A100-SXM4-40GB
+#   Rank  7 Pid 1235820 on      a0048 device  7 [0xca] A100-SXM4-40GB
+#
+#                                                     out-of-place                       in-place          
+#       size         count    type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                     (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+           4             1   float     sum    17.29    0.00    0.00  0e+00    17.15    0.00    0.00  1e-07
+           8             2   float     sum    17.03    0.00    0.00  1e-07    17.03    0.00    0.00  1e-07
+          16             4   float     sum    17.15    0.00    0.00  0e+00    17.10    0.00    0.00  6e-08
+          32             8   float     sum    17.22    0.00    0.00  6e-08    17.22    0.00    0.00  6e-08
+          64            16   float     sum    17.40    0.00    0.01  6e-08    17.27    0.00    0.01  6e-08
+         128            32   float     sum    17.58    0.01    0.01  3e-08    17.48    0.01    0.01  3e-08
+         256            64   float     sum    18.20    0.01    0.02  3e-08    18.09    0.01    0.02  3e-08
+         512           128   float     sum    18.34    0.03    0.05  3e-08    18.62    0.03    0.05  3e-08
+        1024           256   float     sum    20.09    0.05    0.09  1e-07    19.68    0.05    0.09  1e-07
+        2048           512   float     sum    22.23    0.09    0.16  2e-07    22.17    0.09    0.16  2e-07
+        4096          1024   float     sum    25.78    0.16    0.28  2e-07    23.80    0.17    0.30  2e-07
+        8192          2048   float     sum    26.35    0.31    0.54  2e-07    24.91    0.33    0.58  2e-07
+       16384          4096   float     sum    28.60    0.57    1.00  2e-07    27.03    0.61    1.06  2e-07
+       32768          8192   float     sum    35.78    0.92    1.60  2e-07    34.76    0.94    1.65  2e-07
+       65536         16384   float     sum    40.25    1.63    2.85  2e-07    39.26    1.67    2.92  2e-07
+      131072         32768   float     sum    42.58    3.08    5.39  2e-07    41.64    3.15    5.51  2e-07
+      262144         65536   float     sum    48.22    5.44    9.51  2e-07    48.43    5.41    9.47  2e-07
+      524288        131072   float     sum    58.27    9.00   15.75  2e-07    58.55    8.95   15.67  2e-07
+     1048576        262144   float     sum    75.38   13.91   24.34  2e-07    74.40   14.09   24.66  2e-07
+     2097152        524288   float     sum    116.3   18.04   31.56  2e-07    116.2   18.05   31.59  2e-07
+     4194304       1048576   float     sum    140.1   29.94   52.40  2e-07    138.3   30.32   53.06  2e-07
+     8388608       2097152   float     sum    202.8   41.37   72.40  2e-07    198.8   42.19   73.83  2e-07
+    16777216       4194304   float     sum    236.6   70.90  124.07  2e-07    215.9   77.71  136.00  2e-07
+    33554432       8388608   float     sum    370.7   90.52  158.41  2e-07    358.5   93.60  163.80  2e-07
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 21.2687 
+#
