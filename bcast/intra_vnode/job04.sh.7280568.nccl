@@ -1,0 +1,42 @@
+[1623231998.806531] [g0068:112828:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1623231998.806540] [g0068:112829:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1623231998.806649] [g0068:112830:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+[1623231998.806637] [g0068:112831:0]    ucp_context.c:1437 UCX  WARN  UCP version is incompatible, required: 1.8, actual: 1.7 (release 0 /apps/centos7/ucx/1.7.0/gcc7.4.0_cuda11.2.2_gdrcopy2.0/lib/libucp.so.0)
+# nThread 1 nGpus 1 minBytes 4 maxBytes 33554432 step: 2(factor) warmup iters: 5 iters: 100 validation: 1 
+#
+# Using devices
+#   Rank  0 Pid 112828 on      g0068 device  0 [0x3d] Tesla V100-SXM2-16GB
+#   Rank  1 Pid 112829 on      g0068 device  1 [0x3e] Tesla V100-SXM2-16GB
+#   Rank  2 Pid 112830 on      g0068 device  2 [0xb1] Tesla V100-SXM2-16GB
+#   Rank  3 Pid 112831 on      g0068 device  3 [0xb2] Tesla V100-SXM2-16GB
+#
+#                                                     out-of-place                       in-place          
+#       size         count    type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                     (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+           4             1   float       0     6.29    0.00    0.00  0e+00     5.08    0.00    0.00  0e+00
+           8             2   float       0     5.24    0.00    0.00  0e+00     5.08    0.00    0.00  0e+00
+          16             4   float       0     5.22    0.00    0.00  0e+00     5.06    0.00    0.00  0e+00
+          32             8   float       0     5.26    0.01    0.01  0e+00     5.07    0.01    0.01  0e+00
+          64            16   float       0     5.24    0.01    0.01  0e+00     5.08    0.01    0.01  0e+00
+         128            32   float       0     5.26    0.02    0.02  0e+00     5.08    0.03    0.03  0e+00
+         256            64   float       0     5.31    0.05    0.05  0e+00     5.13    0.05    0.05  0e+00
+         512           128   float       0     5.27    0.10    0.10  0e+00     5.11    0.10    0.10  0e+00
+        1024           256   float       0     5.76    0.18    0.18  0e+00     5.35    0.19    0.19  0e+00
+        2048           512   float       0     6.71    0.31    0.31  0e+00     6.02    0.34    0.34  0e+00
+        4096          1024   float       0     7.61    0.54    0.54  0e+00     6.53    0.63    0.63  0e+00
+        8192          2048   float       0     8.95    0.91    0.91  0e+00     7.63    1.07    1.07  0e+00
+       16384          4096   float       0    11.33    1.45    1.45  0e+00    10.32    1.59    1.59  0e+00
+       32768          8192   float       0    14.44    2.27    2.27  0e+00    13.28    2.47    2.47  0e+00
+       65536         16384   float       0    16.58    3.95    3.95  0e+00    16.24    4.04    4.04  0e+00
+      131072         32768   float       0    20.41    6.42    6.42  0e+00    19.76    6.63    6.63  0e+00
+      262144         65536   float       0    26.41    9.92    9.92  0e+00    26.38    9.94    9.94  0e+00
+      524288        131072   float       0    34.55   15.18   15.18  0e+00    34.40   15.24   15.24  0e+00
+     1048576        262144   float       0    48.12   21.79   21.79  0e+00    46.13   22.73   22.73  0e+00
+     2097152        524288   float       0    57.50   36.47   36.47  0e+00    54.46   38.51   38.51  0e+00
+     4194304       1048576   float       0    76.96   54.50   54.50  0e+00    72.83   57.59   57.59  0e+00
+     8388608       2097152   float       0    113.4   73.99   73.99  0e+00    113.1   74.20   74.20  0e+00
+    16777216       4194304   float       0    187.3   89.59   89.59  0e+00    185.9   90.24   90.24  0e+00
+    33554432       8388608   float       0    332.0  101.08  101.08  0e+00    328.2  102.23  102.23  0e+00
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 17.637 
+#
