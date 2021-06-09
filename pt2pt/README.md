@@ -18,45 +18,33 @@ Software versions.
 | OSU Micro-Benchmarks | 5.7            | 5.7            |
 
 
-## Build and Run
+## Build
 
 ### Intra-Node Inter-GPU Communication
 
-Procedures for building and running p2pBandwidthLatencyTest.
-
-#### ComputeNode(A)
+Procedures for building p2pBandwidthLatencyTest for ComputeNode(A).
 
 ```Console
-es1 $ qrsh -g GROUP -l rt_AF=1
-a0001 $ cd pt2pt/intra_anode
+es1 $ qrsh -g GROUP -l rt_AG.small=1
+a0001 $ cd programs
 a0001 $ module load cuda/11.2/11.2.2
-a0001 $ cp -r $CUDA_HOME/samples .
-a0001 $ (cd samples/1_Utilities/p2pBandwidthLatencyTest; make)
-a0001 $ hostname > intra_anode.out
-a0001 $ ./samples/bin/x86_64/linux/release/p2pBandwidthLatencyTest >> intra_anode.out
-a0001 $ rm -fr samples
+a0001 $ cp -r $CUDA_HOME/samples cuda-samples-anode
+a0001 $ cd cuda-samples-anode/1_Utilities/p2pBandwidthLatencyTest
+a0001 $ make
 ```
 
-Check scores under `Bidirectional P2P=Enabled Bandwidth Matrix (GB/s)` and `P2P=Enabled Latency (P2P Writes) Matrix (us)` sections of `intra_anode.out` file.
-
-#### ComputeNode(V)
+Procedures for building p2pBandwidthLatencyTest for ComputeNode(V).
 
 ```Console
-es1 $ qrsh -g GROUP -l rt_F=1
-g0001 $ cd pt2pt/intra_vnode
+es1 $ qrsh -g GROUP -l rt_G.small=1
+g0001 $ cd programs
 g0001 $ module load cuda/11.2/11.2.2
-g0001 $ cp -r $CUDA_HOME/samples .
-g0001 $ (cd samples/1_Utilities/p2pBandwidthLatencyTest; make)
-g0001 $ hostname > intra_vnode.out
-g0001 $ ./samples/bin/x86_64/linux/release/p2pBandwidthLatencyTest >> intra_vnode.out
-g0001 $ rm -fr samples
+g0001 $ cp -r $CUDA_HOME/samples cuda-samples-vnode
+g0001 $ cd cuda-samples-vnode/1_Utilities/p2pBandwidthLatencyTest
+g0001 $ make
 ```
-
-Check scores under `Bidirectional P2P=Enabled Bandwidth Matrix (GB/s)` and `P2P=Enabled Latency (P2P Writes) Matrix (us)` sections of `intra_vnode.out` file.
 
 ### Inter-Node Communication
-
-#### Build
 
 Procedures for building OSU Micro-Benchmarks for ComputeNode(A).
 
@@ -93,7 +81,7 @@ g0001$ cd ..
 g0001$ rm -fr osu-micro-benchmarks-5.7
 ```
 
-#### Run
+### Run
 
 Go into each benchmark directory, like `inter_anode`, and submit a job script in the directory.
 
