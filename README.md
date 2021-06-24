@@ -9,8 +9,6 @@ Please refer to README file in each directory for benchmark detail.
 
 ## Copyright and License
 
-Copyright (c) 2021 National Institute of Advanced Industrial Science and Technology (AIST)
-
-Released under the MIT license
-
+Copyright (c) 2021 National Institute of Advanced Industrial Science and Technology (AIST)  
+Released under the MIT license  
 https://opensource.org/licenses/mit-license.php
