@@ -4,7 +4,7 @@ This repository contains jobscripts and results of measuring performance of ABCI
 The purpose of benchmarks is to show performance difference of two types of compute nodes of ABCI, which are Compute Node (A) and Compute Node (V), in common ABCI use cases.
 Please refer to README file in each directory for benchmark detail.
 
-You can find information abount ABCI on [ABCI webpage](https://abci.ai/) and [ABCI documents](https://docs.abci.ai/en/).
+You can find information about ABCI on [ABCI webpage](https://abci.ai/) and [ABCI documents](https://docs.abci.ai/en/).
 
 ## Publication
 
